@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+/*全体*/
+
+@font-face {
+  font-family: "Yu Gothic M";
+  src: local("Yu Gothic Medium");
+}
+/* font-weight: bold の時は通常どおり Bold 書体を使わせる */
+@font-face {
+  font-family: "Yu Gothic M";
+  src: local("Yu Gothic Bold");
+  font-weight: bold;
+}
+
+body {
+	color: #282828;
+	line-height: 1;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", HelveticaNeue, "Segoe UI", "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.serif {
+	font-family: Georgia, "游明朝体", "YuMincho", "游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN W3", HiraMinProN-W3, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+body a {
+	color: #282828;
+	text-decoration: none;
+}
+
+/*ハンバーガーメニュー*/
+.hamburger_btn {
+	cursor: pointer;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+}
+.menu_trigger {
+	position: relative;
+  width: 34px;
+  height: 24px;
+}
+.menu_trigger {
+	position: relative;
+  width: 34px;
+  height: 24px;
+}
+.menu_trigger, .menu_trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+}
+.menu_trigger span:nth-of-type(1) {
+    top: 0;
+}
+.menu_trigger span:nth-of-type(2) {
+    top: 11px;
+}
+.menu_trigger span:nth-of-type(3) {
+    bottom: 0;
+}
+.menu_trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3D3D3D;
+    border-radius: 4px;
+}
+.menu_trigger::after {
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    content: 'MENU';
+    display: block;
+    width: 100%;
+    color: #3D3D3D;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    transition: all .4s;
+}
+.menu_trigger.active::after {
+    content: 'CLOSE';
+    bottom: -18px;
+}
+.menu_trigger.active span:nth-of-type(1) {
+    transform: translateY(11px) rotate(-45deg);
+}
+
+.menu_trigger.active span:nth-of-type(2) {
+    opacity: 0;
+}
+.menu_trigger.active span:nth-of-type(3) {
+    transform: translateY(-11px) rotate(45deg);
+}
+
+/*ヘッダー*/
+
+header {
+	height: 200px;
+}
+
+header nav {
+	display: none;
+}
+
+header .sns {
+	width: 20px;
+	position: fixed;
+  right: 20px;
+  top: 20px;
+}
+
+/*メイン*/
+h1 {
+	width: 240px;
+	margin: 0 auto;
+}
+
+.catch {
+	text-align: center;
+	line-height: 2;
+}
+
+.catch:first-letter {
+	font-size: 2em;
+	line-height: 1;
+	color: #525252;
+}
